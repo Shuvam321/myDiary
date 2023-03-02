@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="accountDetial.css"><!--MY CSS-->
+    <link rel="icon" href="../image/myDiary-logo.jpg"><!--TITLE ICON LINK-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!--FONTAWESOME LINK-->
+    <!-- <link rel="stylesheet" href="/bootstrap-5.3.0-alpha1/dist/css/bootstrap.css"> -->
+    <title>Account Detail</title>
+</head>
+
+<body>
+    <!-- Animated Wave Background  -->
+    <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+    <!-- Log In Form Section -->
+    <section>
+        <div class="container" id="container">
+            <div class="form-container sign-up-container">
+                <form action="#">
+                    <h1>Sign Up</h1>
+                    <div class="social-container">
+                        <a href="https://github.com/Shuvam321" target="_blank" class="social"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://codepen.io/Shuvam_Kunwer" target="_blank" class="social"><i
+                                class="fab fa-codepen"></i></a>
+                        <a href="mailto: kshuvam360@gmail.com" target="_blank" class="social"><i
+                                class="fab fa-google"></i></a>
+                    </div>
+                    <span>Or use your Email for registration</span>
+                    <label>
+                        <input type="text" placeholder="Name" id="signUp-userName"/>
+                    </label>
+                    <label>
+                        <input type="email" placeholder="Email" id="signUp-userEmail"/>
+                    </label>
+                    <label>
+                        <input type="password" placeholder="Password" id="signUp-password" />
+                        <!-- <i class="far fa-eye" id="togglePassword" style="cursor: pointer;"></i> -->
+                    </label>
+                    <label>
+                        <input type="password" placeholder="Re-Password" id="signUp-repassword" />
+                        <!-- <i class="far fa-eye" id="toggleReg" style="cursor: pointer;"></i> -->
+                    </label>
+                    <button style="margin-top: 9px" onclick="signUp()">Sign Up</button>
+                </form>
+            </div>
+            <div class="form-container sign-in-container" id="signInPage">
+                <form action="#">
+                    <h1>Sign in</h1>
+                    <div class="social-container">
+                        <a href="https://github.com/Shuvam321" target="_blank" class="social"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://codepen.io/Shuvam_Kunwer" target="_blank" class="social"><i
+                                class="fab fa-codepen"></i></a>
+                        <a href="mailto: kshuvam360@gmail.com" target="_blank" class="social"><i
+                                class="fab fa-google"></i></a>
+                    </div>
+                    <span> Or sign in using E-Mail Address</span>
+                    <label>
+                        <input type="email" placeholder="Email" id="logIn-userEmail"/>
+                    </label>
+                    <label>
+                        <input type="password" placeholder="Password" id="password" />
+                        <!-- <i class="far fa-eye" id="toggleReg" style="cursor: pointer;"></i> -->
+                    </label>
+
+                    <a href="#">Forgot your password?</a>
+                    <button onclick="signIn()">Sign In</button>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>Log in</h1>
+                        <p>Sign in here if you already have an account </p>
+                        <button class="ghost mt-5" id="signIn">Sign In</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>Create, Account!</h1>
+                        <p>Sign up if you still don't have an account ... </p>
+                        <!-- <a href="#signInPage"></a> -->
+                        <button class="ghost" id="signUp">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <a href="../index.html"></a> -->
+    <script src="accountDetial.js"></script><!--MY JS LINK-->
+</body>
+
+<!-- https://Github.com/YasinDehfuli
+     https://Codepen.io/YasinDehfuli
+     -->
+
+</html>
