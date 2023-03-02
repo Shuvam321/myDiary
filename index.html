@@ -1,20 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap-5.3.0-alpha1/dist/css/bootstrap.css"> <!--BOOSTRAP CSS LINK-->
+    <!-- <link rel="stylesheet" href="bootstrap-5.3.0-alpha1/scss/bootstrap.css"> -->
     <link rel="stylesheet" href="css/myDiary.css"><!--MY CSS LINK-->
     <link rel="icon" href="image/myDiary-logo.jpg"><!--ICON LINK-->
     <title>myDiary</title>
 </head>
+
 <body>
-    <div class="container-fluid row">
-        <div class="col-lg-3 col-3" style="border: 2px solid red; height: 100px;"></div>
-        <div class="col-lg-9 col-9"style="border: 2px solid blue; height: 200px"></div>
+    <div class="container-fluid">
+        <div class="col-lg-12 col-12 row d-flex">
+            <div class="col-3 col-lg-3" style="border: 2px solid red">
+                DashBoard
+            </div>
+            <div class="col-9 col-lg-9" style="border: 2px solid blue">
+                All section and stuff
+                <div class="row d-flex justify-content-between" style="border: 2px solid green">
+                    <div class="col-9" style="border: 2px solid yellow">
+                        <nav class="navbar bg-body-tertiary">
+                            <div class="container-fluid">
+                                <form class="d-flex" style="width:75%" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Search"
+                                        aria-label="Search">
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                </form>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="col-3" style="border: 2px solid purple">
+                        <div class="container">
+                        <h1>Profil Image Upload 
+                        </h1>
+                        <div class="avatar-upload">
+                            <!-- <div class="avatar-edit">
+                                <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                <label for="imageUpload"></label>
+                            </div> -->
+                            <div class="avatar-preview">
+                                <div id="imagePreview" style="background-image: url('http://i.pravatar.cc/500?img=7');">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
 </body>
 <script src="bootstrap-5.3.0-alpha1/dist/js/bootstrap.js"></script><!--BOOSTRAP JS LINK-->
 <script src="js/myDiary.js"></script><!--MY JS LINK-->
+
 </html>
