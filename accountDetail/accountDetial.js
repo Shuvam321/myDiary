@@ -1,5 +1,7 @@
 const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
+const signInForm = document.getElementById('signInForm')
+const signOutForm = document.getElementById('signOutForm')
 const container = document.getElementById('container');
 
 signUpButton.addEventListener("click", () =>
@@ -47,6 +49,15 @@ function signUp() {
   // console.log(anchor.href)
   // var signUpButton = document.getElementById('signUp');
   // signUpButton.appendChild(anchor);
+
+  signOutForm.addEventListener("click", () =>
+  container.classList.remove('right-panel-active'),
+  // console.log("hello world")
+);
+
+// signInForm.addEventListener("click", () =>
+//   container.classList.remove('right-panel-active'));
+
 
 }
 
