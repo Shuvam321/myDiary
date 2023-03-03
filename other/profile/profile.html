@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css"><!--MY CSS-->
+    <link rel="icon" href="/image/myDiary-logo.jpg"><!--TITLE ICON LINK-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"><!--FONTAWESOME LINK-->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <title>myDiary-Profile</title>
+</head>
+<body>
+<!-- <div class="profile-pic">
+    <label class="-label" for="file">
+      <span class="glyphicon glyphicon-camera"></span>
+      <span>Change Image</span>
+    </label>
+    <input id="file" type="file" onchange="loadFile(event)"/>
+    <img src="https://cdn.pixabay.com/photo/2017/08/06/21/01/louvre-2596278_960_720.jpg" id="output" width="200" />
+  </div> -->
+
+  
+    <div id="app" class="d-flex justify-center mb-6">
+      <v-app>
+        <v-main>
+          <v-container fluid>
+            <v-card max-width="450px" class="mx-auto bg" elevation="2">
+              <v-img class="" height="200px" src="http://unblast.com/wp-content/uploads/2021/09/Real-Estate-Agent-Illustration.jpg" gradient="150deg, rgb(185 224 255 / 58%) 0%, rgb(243 220 246 / 52%) 35%, rgb(223 255 242 / 74%) 74%">
+              </v-img>
+              <!-- <v-row justify="center">
+                <v-col align-self="start" class="d-flex justify-center align-center pa-0" cols="12">
+                  <v-avatar class="profile avatar-center-heigth avatar-shadow" color="grey" size="164">
+                    <v-btn @click="onButtonClick" class="upload-btn" x-large icon>
+                      <v-icon>
+                        mdi-camera
+                      </v-icon>
+                    </v-btn>
+                    <input ref="uploader" class="d-none" type="file" accept="image/*" :change="onFileChanged">
+                    <v-img src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"></v-img>
+  
+                  </v-avatar>
+                </v-col>
+              </v-row> -->
+              <div class="profile-pic">
+                <label class="-label" for="file">
+                  <span class="glyphicon glyphicon-camera"></span>
+                  <span>Change Image</span>
+                </label>
+                <input id="file" type="file" onchange="loadFile(event)"/>
+                <img src="https://cdn.pixabay.com/photo/2017/08/06/21/01/louvre-2596278_960_720.jpg" id="output" width="200" />
+              </div>
+                  <v-list-item color="#0000" class="profile-text-name ma-4 pt-16">
+                    <v-list-item-content>
+                      <v-list-item-title class="text-h6">
+                        Marcus Obrien
+                      </v-list-item-title>
+                      <v-list-item-subtitle>Network Engineer</v-list-item-subtitle>
+                    </v-list-item-content>
+                    <v-list-item-action>
+                      <v-btn class="mx-2" fab dark color="indigo" small>
+                        <v-icon dark>
+                          mdi-plus
+                        </v-icon>
+                      </v-btn>
+                    </v-list-item-action>
+                  </v-list-item>
+   
+                  <v-card-subtitle>
+                    <b class="ml-2">Sobre Mim</b>
+                    <v-btn v-on:click="saveBio" icon>
+                      <v-icon small>{{ bioIcon }}</v-icon>
+                    </v-btn>
+                  </v-card-subtitle>
+  
+                  <p v-if="!editBio" class="pl-6 pr-6 pt-0">
+                    {{ Bio }}
+                  </p>
+                  <v-textarea v-model="Bio" rows="2" v-if="editBio" label="Editar minha Bio" class="pa-6"></v-textarea>
+                  <v-spacer></v-spacer>
+                  <v-text-field class="pa-6" v-model="Phone" prepend-icon="mdi-whatsapp" label="Phone" :disabled="!editBio"></v-text-field>
+                  <v-spacer></v-spacer>
+        
+              <v-row>
+                <v-col cols="6" class="text-end">
+                  <v-list-item-content class="sutitles">
+                    <v-list-item-title class="text-h6">
+                      1002
+                    </v-list-item-title>
+                    <v-list-item-subtitle class="text-caption">Curtidas</v-list-item-subtitle>
+                  </v-list-item-content>
+                </v-col>
+                <v-col cols="6" class="text-start">
+                  <v-list-item-content class="sutitles">
+                    <v-list-item-title class="text-h6">
+                      10
+                    </v-list-item-title>
+                    <v-list-item-subtitle class="text-caption">Seguindo</v-list-item-subtitle>
+                  </v-list-item-content>
+                </v-col>
+              </v-row>
+              <!--<v-row>
+                <v-col class="d-flex justify-end align-right pa-2" cols="6">
+                  <v-btn rounded color="primary" dark>
+                    Agendar um Horário
+                  </v-btn>
+                </v-col>
+                <v-col class="d-flex justify-left align-left pa-2" cols="6">
+                  <v-btn rounded color="primary" dark>
+                    Contato
+                  </v-btn>
+                </v-col>
+              </v-row>-->
+            </v-card>
+          </v-container>
+        </v-main>
+      </v-app>
+  
+    </div>
+  
+    
+    
+   
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+<script src="profile.js"></script>
+</html>
