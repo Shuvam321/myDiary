@@ -18,10 +18,16 @@ h1 small {
   padding-top: 8px;
   color: gray;
 }  */
+
+
 .avatar-upload {
-  position: relative;
+  /* position: relative;
   max-width: 205px;
-  margin: 50px auto;
+  margin: 50px auto; */
+  display: flex;
+  /* flex-wrap: wrap; */
+  /* align-items: center;
+  justify-content: center; */
 }
 .avatar-upload .avatar-edit {
   position: absolute;
@@ -61,8 +67,8 @@ h1 small {
   margin: auto;
 }
 .avatar-upload .avatar-preview {
-  width: 192px;
-  height: 192px;
+  width: 70px;
+  height: 70px;
   position: relative;
   border-radius: 100%;
   border: 6px solid #F8F8F8;
@@ -76,6 +82,49 @@ h1 small {
   background-repeat: no-repeat;
   background-position: center;
 }  
+
+.avatar-upload span{
+  /* text-align: center; */
+  margin-top: 18px;
+}
+
+@media screen and (max-width: 1220px) {
+  .avatar-upload{
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* .avatar-upload span{
+    margin: 0 auto;
+    text-align: center;
+  } */
+}
+
+@media screen and (max-width: 1220px){
+    .avatar-upload span{
+      display: none;
+    }
+  }
+
+@media screen and (max-width:320px) {
+  
+  .avatar-upload .avatar-preview{
+    width: 40px;
+    height: 40px;
+  }
+/* .dropdown-menu{
+  width: 70%;
+  margin: 0 auto */
+/* } */
+}
+
+#dropdownMenu2{
+  border: none;
+  background-color: transparent;
+}
+
+
  
 
 
