@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="profile.css"><!--MY CSS-->
     <link rel="icon" href="/image/myDiary-logo.jpg"><!--TITLE ICON LINK-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"><!--FONTAWESOME LINK-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!--FONTAWESOME LINK-->
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
@@ -14,119 +16,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
     <title>myDiary-Profile</title>
 </head>
-<body>
-<!-- <div class="profile-pic">
-    <label class="-label" for="file">
-      <span class="glyphicon glyphicon-camera"></span>
-      <span>Change Image</span>
-    </label>
-    <input id="file" type="file" onchange="loadFile(event)"/>
-    <img src="https://cdn.pixabay.com/photo/2017/08/06/21/01/louvre-2596278_960_720.jpg" id="output" width="200" />
-  </div> -->
 
-  
-    <div id="app" class="d-flex justify-center mb-6">
-      <v-app>
-        <v-main>
-          <v-container fluid>
-            <v-card max-width="450px" class="mx-auto bg" elevation="2">
-              <v-img class="" height="200px" src="http://unblast.com/wp-content/uploads/2021/09/Real-Estate-Agent-Illustration.jpg" gradient="150deg, rgb(185 224 255 / 58%) 0%, rgb(243 220 246 / 52%) 35%, rgb(223 255 242 / 74%) 74%">
-              </v-img>
-              <!-- <v-row justify="center">
-                <v-col align-self="start" class="d-flex justify-center align-center pa-0" cols="12">
-                  <v-avatar class="profile avatar-center-heigth avatar-shadow" color="grey" size="164">
-                    <v-btn @click="onButtonClick" class="upload-btn" x-large icon>
-                      <v-icon>
-                        mdi-camera
-                      </v-icon>
-                    </v-btn>
-                    <input ref="uploader" class="d-none" type="file" accept="image/*" :change="onFileChanged">
-                    <v-img src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"></v-img>
-  
-                  </v-avatar>
-                </v-col>
-              </v-row> -->
-              <div class="profile-pic">
-                <label class="-label" for="file">
-                  <span class="glyphicon glyphicon-camera"></span>
-                  <span>Change Image</span>
-                </label>
-                <input id="file" type="file" onchange="loadFile(event)"/>
-                <img src="https://cdn.pixabay.com/photo/2017/08/06/21/01/louvre-2596278_960_720.jpg" id="output" width="200" />
-              </div>
-                  <v-list-item color="#0000" class="profile-text-name ma-4 pt-16">
-                    <v-list-item-content>
-                      <v-list-item-title class="text-h6">
-                        Marcus Obrien
-                      </v-list-item-title>
-                      <v-list-item-subtitle>Network Engineer</v-list-item-subtitle>
-                    </v-list-item-content>
-                    <v-list-item-action>
-                      <v-btn class="mx-2" fab dark color="indigo" small>
-                        <v-icon dark>
-                          mdi-plus
-                        </v-icon>
-                      </v-btn>
-                    </v-list-item-action>
-                  </v-list-item>
-   
-                  <v-card-subtitle>
-                    <b class="ml-2">Sobre Mim</b>
-                    <v-btn v-on:click="saveBio" icon>
-                      <v-icon small>{{ bioIcon }}</v-icon>
-                    </v-btn>
-                  </v-card-subtitle>
-  
-                  <p v-if="!editBio" class="pl-6 pr-6 pt-0">
-                    {{ Bio }}
-                  </p>
-                  <v-textarea v-model="Bio" rows="2" v-if="editBio" label="Editar minha Bio" class="pa-6"></v-textarea>
-                  <v-spacer></v-spacer>
-                  <v-text-field class="pa-6" v-model="Phone" prepend-icon="mdi-whatsapp" label="Phone" :disabled="!editBio"></v-text-field>
-                  <v-spacer></v-spacer>
-        
-              <v-row>
-                <v-col cols="6" class="text-end">
-                  <v-list-item-content class="sutitles">
-                    <v-list-item-title class="text-h6">
-                      1002
-                    </v-list-item-title>
-                    <v-list-item-subtitle class="text-caption">Curtidas</v-list-item-subtitle>
-                  </v-list-item-content>
-                </v-col>
-                <v-col cols="6" class="text-start">
-                  <v-list-item-content class="sutitles">
-                    <v-list-item-title class="text-h6">
-                      10
-                    </v-list-item-title>
-                    <v-list-item-subtitle class="text-caption">Seguindo</v-list-item-subtitle>
-                  </v-list-item-content>
-                </v-col>
-              </v-row>
-              <!--<v-row>
-                <v-col class="d-flex justify-end align-right pa-2" cols="6">
-                  <v-btn rounded color="primary" dark>
-                    Agendar um Horário
-                  </v-btn>
-                </v-col>
-                <v-col class="d-flex justify-left align-left pa-2" cols="6">
-                  <v-btn rounded color="primary" dark>
-                    Contato
-                  </v-btn>
-                </v-col>
-              </v-row>-->
-            </v-card>
-          </v-container>
-        </v-main>
-      </v-app>
-  
-    </div>
-  
-    
-    
-   
+<body>
+
+    <body>
+        <!-- <div class="profile-pic">
+            <label class="-label" for="file">
+              <span class="glyphicon glyphicon-camera"></span>
+              <span>Change Image</span>
+            </label>
+            <input id="file" type="file" onchange="loadFile(event)"/>
+            <img src="https://cdn.pixabay.com/photo/2017/08/06/21/01/louvre-2596278_960_720.jpg" id="output" width="200" />
+          </div> -->
+
+
+        <div id="app" class="d-flex justify-center mb-6">
+            <div data-app="true" class="v-application v-application--is-ltr theme--light" id="app">
+                <div class="v-application--wrap">
+                    <main class="v-main" data-booted="true" style="padding: 0px;">
+                        <div class="v-main__wrap">
+                            <div class="container container--fluid">
+                                <div class="mx-auto bg v-card v-sheet theme--light elevation-2"
+                                    style="max-width: 450px;">
+                                    <div class="v-image v-responsive theme--light" style="height: 200px;">
+                                        <div class="v-responsive__sizer" style="padding-bottom: 75%;"></div>
+                                        <div class="v-image__image v-image__image--cover"
+                                            style="background-image: linear-gradient(150deg, rgba(185, 224, 255, 0.58) 0%, rgba(243, 220, 246, 0.52) 35%, rgba(223, 255, 242, 0.74) 74%), url(&quot;/image/profile-dairy1.jfif&quot;); background-position: center center;">
+                                        </div>
+                                        <!--  -->
+                                        <div class="v-responsive__content" style="width: 2000px;"></div>
+                                    </div>
+                                    <div class="profile-pic"><label for="file" class="-label"><span
+                                                class="glyphicon glyphicon-camera"></span> <span>Change
+                                                Image</span></label> <input id="file" type="file"
+                                            onchange="loadFile(event)"> <img
+                                            src="https://cdn.pixabay.com/photo/2017/08/06/21/01/louvre-2596278_960_720.jpg"
+                                            id="output" width="200"></div>
+                                    <div tabindex="-1" class="profile-text-name ma-4 pt-16 v-list-item theme--light">
+                                        <div class="v-list-item__content">
+                                            <div class="v-list-item__title text-h6">
+                                                Shuvam Kunwer
+                                            </div>
+                                            <div class="v-list-item__subtitle">Computer Engineer</div>
+                                        </div>
+                                        <div class="v-list-item__action"><button type="button"
+                                                class="mx-2 v-btn v-btn--is-elevated v-btn--fab v-btn--has-bg v-btn--round theme--dark v-size--small indigo"><span
+                                                    class="v-btn__content"><i aria-hidden="true"
+                                                        class="v-icon notranslate mdi mdi-plus theme--dark"></i></span></button>
+                                        </div>
+                                    </div>
+                                    <div class="v-card__subtitle"><b class="ml-2">Sobre Mim</b> <button type="button"
+                                            class="v-btn v-btn--icon v-btn--round theme--light v-size--default"><span
+                                                class="v-btn__content">
+                                                <i aria-hidden="true"
+                                                    class="v-icon notranslate mdi mdi-pencil theme--light"
+                                                    style="font-size: 16px;"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <p class="pl-6 pr-6 pt-0">
+                                        my bio test about myself, what do you know about me?
+                                    </p> <!---->
+                                    <div class="spacer"></div>
+                                    <div
+                                        class="v-input pa-6 v-input--is-label-active v-input--is-dirty v-input--is-disabled theme--light v-text-field v-text-field--is-booted">
+                                        <div class="v-input__prepend-outer">
+                                            <div class="v-input__icon v-input__icon--prepend">
+                                                <i aria-hidden="true"
+                                                    class="v-icon notranslate v-icon--disabled mdi mdi-whatsapp theme--light"></i>
+                                            </div>
+                                        </div>
+                                        <div class="v-input__control">
+                                            <div class="v-input__slot">
+                                                <div class="v-text-field__slot">
+                                                    <label for="input-11"
+                                                        class="v-label v-label--active v-label--is-disabled theme--light"
+                                                        style="left: 0px; right: auto; position: absolute;">Phone</label>
+                                                    <input disabled="disabled" id="input-11" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="v-text-field__details">
+                                                <div class="v-messages theme--light">
+                                                    <div class="v-messages__wrapper"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="spacer"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
 <script src="profile.js"></script>
+
 </html>
