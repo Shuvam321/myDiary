@@ -97,6 +97,11 @@ h1 small {
   position: relative;
 }
 
+.wrapper.active .search .serach-btn {
+  white-space: normal;
+  overflow: visible;
+}
+
 @media screen and (max-width: 1220px) {
   .avatar-upload{
     /* display: flex; */
@@ -130,7 +135,7 @@ h1 small {
     display: none;
     
   }
-  .serach-btn{
+  .search-btn{
     display: none;
   }
   
