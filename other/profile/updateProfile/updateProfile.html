@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--TITLE-->
+    <title>myDiary-Update Profile</title>
+
+    <!--ICON-->
+    <link rel="shortcut icon" href="/DevanagariBrahmi/logo.png">
+
+    <!--TITLE ICON-->
+    <link rel="icon" href="/image/myDiary-logo.jpg">
+
+    <!--META TAGS-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="Team Bboysdreamsfell">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="Profiler Name || Krishivalahs" />
+
+    <!--EXTERNAL CSS-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--MYCSS-->
+    <link rel="stylesheet" href="updateProfile.css">
+
+
+    <!--PLUGIN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Oswald:wght@300;400&family=Ubuntu:wght@700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+
+<body>
+
+
+    <div class="container">
+        <div class="alert">
+            <span class="closebtn">&times;</span>
+            <strong>NOTE!</strong> Please verify your account. <a href="#" style="color:#7ed321;">Resend
+                Verification Code</a>
+        </div>
+        <table>
+            <tr>
+                <td>
+                    <section>
+                        <label for="fileToUpload">
+                            <i class="fa fa-camera"></i>
+                            <input type="file" id="fileToUpload" style="visibility:hidden;"
+                                accept=".png,.jpg,jpeg,.PNG,.JPEG" name="fileToUpload"
+                                onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                        </label>
+                        <img src="/image/nature.jpg" id="blah" alt="Avatar">
+                    </section>
+                    <h1>Shuvam Kunwer</h1>
+                    <h3>myStory</h3>
+                </td>
+                <td>
+                    <ul>
+                        <li><b>Full name</b> <input type="text" name="fname" id="fname" maxlength="100"
+                                placeholder="Shuvam Kunwer" required /> <i class="fa fa-edit" id="edit1"
+                                onclick="document.getElementById('fname').style.pointerEvents='auto';document.getElementById('fname').focus();this.style.display='none'; document.getElementById('check1').style.display='inline-block';"></i>
+                            <i class="fa fa-check" style="display:none;" id="check1"
+                                onclick="document.getElementById('edit1').style.display='inline-block';this.style.display='none';document.getElementById('fname').style.pointerEvents='none';"></i>
+                        </li>
+                        <li>
+                            <b>Email</b>
+                            <input type="email" name="email" id="email" maxlength="150" placeholder="email@mail.com"
+                                required />
+                            <i class="fa fa-edit" id="edit4"
+                                onclick="document.getElementById('email').style.pointerEvents='auto';document.getElementById('email').focus();this.style.display='none'; document.getElementById('check4').style.display='inline-block';"></i>
+                            <i class="fa fa-check" style="display:none;" id="check4"
+                                onclick="document.getElementById('edit4').style.display='inline-block';document.getElementById('mobile').style.pointerEvents='none';this.style.display='none';"></i>
+                        </li>
+                        <li>
+                            <b>Contact number</b>
+                            <input type="tel" name="mobile" id="mobile" maxlength="10" placeholder="+91 12345 69870" required /> <i
+                                class="fa fa-edit" id="edit2"
+                                onclick="document.getElementById('mobile').style.pointerEvents='auto';document.getElementById('mobile').focus();this.style.display='none'; document.getElementById('check2').style.display='inline-block';">
+                            </i>
+                            <i class="fa fa-check" style="display:none;" id="check2"
+                                onclick="document.getElementById('edit2').style.display='inline-block';document.getElementById('mobile').style.pointerEvents='none';this.style.display='none';"></i>
+                        </li>
+                        <li>
+                            <b>Address</b>
+                            <input type="text" name="address" id="address" maxlength="250"
+                                placeholder="Street, Pincode, Province/State, Country" required />
+                            <i class="fa fa-edit" id="edit3"
+                                onclick="document.getElementById('address').style.pointerEvents='auto';document.getElementById('address').focus();this.style.display='none'; document.getElementById('check3').style.display='inline-block';"></i>
+                            <i class="fa fa-check" style="display:none;" id="check3"
+                                onclick="document.getElementById('edit3').style.display='inline-block';document.getElementById('address').style.pointerEvents='none';this.style.display='none';"></i>
+                        </li>
+                        <li>
+                            <b>Password</b>
+                            <input type="password" name="address" id="password" maxlength="250"
+                                placeholder="Password" required />
+                            <i class="fa fa-edit" id="edit5"
+                                onclick="document.getElementById('password').style.pointerEvents='auto';document.getElementById('password').focus();this.style.display='none'; document.getElementById('check5').style.display='inline-block';"></i>
+                            <i class="fa fa-check" style="display:none;" id="check5"
+                                onclick="document.getElementById('edit5').style.display='inline-block';document.getElementById('password').style.pointerEvents='none';this.style.display='none';"></i>
+                        </li>
+                        <li>
+                            <b>User Name</b>
+                            <input type="text" name="address" id="userName" maxlength="250"
+                                placeholder="UserName" required />
+                            <i class="fa fa-edit" id="edit6"
+                                onclick="document.getElementById('userName').style.pointerEvents='auto';document.getElementById('userName').focus();this.style.display='none'; document.getElementById('check6').style.display='inline-block';"></i>
+                            <i class="fa fa-check" style="display:none;" id="check6"
+                                onclick="document.getElementById('edit6').style.display='inline-block';document.getElementById('userName').style.pointerEvents='none';this.style.display='none';"></i>
+                        </li>
+                        <li>
+                            <b>Diary Name</b>
+                            <input type="text" name="address" id="diaryName" maxlength="250"
+                                placeholder="DiaryName" required />
+                            <i class="fa fa-edit" id="edit7"
+                                onclick="document.getElementById('diaryName').style.pointerEvents='auto';document.getElementById('diaryName').focus();this.style.display='none'; document.getElementById('check7').style.display='inline-block';"></i>
+                            <i class="fa fa-check" style="display:none;" id="check7"
+                                onclick="document.getElementById('edit7').style.display='inline-block';document.getElementById('diaryName').style.pointerEvents='none';this.style.display='none';"></i>
+                        </li>
+                        
+                        <li> 
+                            <div class="button">
+                            <button type="button" class="saveBtn" onclick="updateProfile()">
+                                <!-- <i class="fas fa-edit"></i> -->
+                                Save
+                              </button>
+                              <a href="../createProfile/createProfile.html"><button type="button" class="createBtn" onclick="updateProfile()">
+                                <!-- <i class="fas fa-edit"></i> -->
+                                Create Profile
+                              </button></a>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </td>
+            </tr>
+           
+            <!-- <tr>
+                <td class="section2">
+                    <h2 style="text-align:left;">PUBLISH YOUR PRODUCT</h2>
+                    <ul>
+                        <li>
+                            <select>
+                                <option value="0">Choose a category</option>
+                                <option value="fruits">Fruits</option>
+                                <option value="groceries">Groceries</option>
+                                <option value="vegetables">Vegetables</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="productimage">Upload Your Product Picture</label>
+                            <input type="file" name="productimage" id="productimage"
+                                accept=".jpg,.JPG,.png,.PNG,.jpeg,.JPEG" required />
+                        </li>
+                        <li>
+                            <label for="title">Product Title</label>
+                            <input type="text" id="title" name="title" placeholder="eg:Farm Tomoto" maxlength="30"
+                                required="" />
+                        </li>
+                        <li>
+                            <label for="tags">Tags</label>
+                            <input type="text" id="tags" name="tags" placeholder="eg:tomoto,brinjal,onions"
+                                maxlength="50" required="" />
+                        </li>
+
+                        <li>
+                            <label for="description">Description</label>
+                            <textarea id="description" name="description"
+                                placeholder="Tell something about your product" maxlength="250" required=""></textarea>
+                        </li>
+                    </ul>
+                    <button class="btn" style="width:100px;">SUBMIT</button>
+                </td>
+                <td class="inframe">
+                    <h2>PRODUCTS IN FRAME</h2>
+                    <div class="card">
+                        <img src="https://i.ibb.co/pwHsGgc/01.jpg" alt="NO PREVIEW">
+                        <section class="card_content">
+                            <h3>Tomoto</h3>
+                            <ul>
+                                <li><b>Published Date: </b>12/05/2021</li>
+                                <li><b>Quantity: </b><input type="tel" name="updatequantity" id="updatequantity"
+                                        value="1500" required /> <i class="fa fa-edit" id="uedit1"
+                                        onclick="document.getElementById('updatequantity').style.pointerEvents='auto';document.getElementById('updatequantity').focus();this.style.display='none'; document.getElementById('ucheck1').style.display='inline-block';"></i>
+                                    <i class="fa fa-check" style="display:none;" id="ucheck1"
+                                        onclick="document.getElementById('uedit1').style.display='inline-block';document.getElementById('updatequantity').style.pointerEvents='none';this.style.display='none';"></i>
+                                </li>
+                                <li><b>Quantity In Supply: </b>300KG</li>
+                                <li><b>Price: </b><input type="tel" name="updateprice" id="updateprice" value="40"
+                                        required /> <i class="fa fa-edit" id="uedit2"
+                                        onclick="document.getElementById('updateprice').style.pointerEvents='auto';document.getElementById('updateprice').focus();this.style.display='none'; document.getElementById('ucheck2').style.display='inline-block';"></i>
+                                    <i class="fa fa-check" style="display:none;" id="ucheck2"
+                                        onclick="document.getElementById('uedit2').style.display='inline-block';document.getElementById('updateprice').style.pointerEvents='none';this.style.display='none';"></i>
+                                </li>
+                            </ul>
+                            <button class="btn">UPDATE</button> <button class="btn"
+                                style="background:#960c06;">DELETE</button>
+                        </section>
+                    </div>
+                </td>
+            </tr> -->
+        </table>
+    </div>
+
+
+    <!--JAVASCRIPT-->
+    <script src="js/custom.js"></script>
+    <script>
+        function editdetails2() {
+        }
+
+        var close = document.getElementsByClassName("closebtn");
+        var i;
+
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = function () {
+                var div = this.parentElement;
+                div.style.opacity = "0";
+                setTimeout(function () { div.style.display = "none"; }, 600);
+            }
+        }
+    </script>
+</body>
+
+</html>

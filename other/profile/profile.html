@@ -10,114 +10,62 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <!--FONTAWESOME LINK-->
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <!--TEMPLATE CSS-->
     <title>myDiary-Profile</title>
 </head>
 
 <body>
+    <div class="container">
+        <div class="card__item" aria-labelledby="article-title">
+            <article class="card__item__article">
+                <h2 id="article-title" class="card__item__article-title ">Profile</h2>
+                <div class="container">
 
-    <body>
-        <!-- <div class="profile-pic">
-            <label class="-label" for="file">
-              <span class="glyphicon glyphicon-camera"></span>
-              <span>Change Image</span>
-            </label>
-            <input id="file" type="file" onchange="loadFile(event)"/>
-            <img src="https://cdn.pixabay.com/photo/2017/08/06/21/01/louvre-2596278_960_720.jpg" id="output" width="200" />
-          </div> -->
+                    <div class="profile-pic">
+                        <label class="-label" for="file">
+                            <span class="glyphicon glyphicon-camera"></span>
+                            <!-- <span>Change Image</span> -->
+                        </label>
+                        <input id="file" type="file" onchange="loadFile(event)" />
+                        <img src="/image/nature.jpg" id="output"
+                            width="200" />
+                    </div>
+                    <div class="profileUsername">
+                        <label for="">Username: </label>
+                        <label for=""> Shuvam Kunwer</label>
+                    </div>
+                    <div class="profileEmail">
+                        <label for="">Diary-name: </label>
+                        <label for="">myStory</label>
+                    </div> <br>
+                    <div class="profileBtn">
+                        <a href="./updateProfile/updateProfile.html" target="_self"><button type="button">
+                            <!-- <i class="fas fa-edit"></i> -->
+                            Edit
+                          </button></a>
+                    </div>
 
-
-        <div id="app" class="d-flex justify-center mb-6">
-            <div data-app="true" class="v-application v-application--is-ltr theme--light" id="app">
-                <div class="v-application--wrap">
-                    <main class="v-main" data-booted="true" style="padding: 0px;">
-                        <div class="v-main__wrap">
-                            <div class="container container--fluid">
-                                <div class="mx-auto bg v-card v-sheet theme--light elevation-2"
-                                    style="max-width: 450px;">
-                                    <div class="v-image v-responsive theme--light" style="height: 200px;">
-                                        <div class="v-responsive__sizer" style="padding-bottom: 75%;"></div>
-                                        <div class="v-image__image v-image__image--cover"
-                                            style="background-image: linear-gradient(150deg, rgba(185, 224, 255, 0.58) 0%, rgba(243, 220, 246, 0.52) 35%, rgba(223, 255, 242, 0.74) 74%), url(&quot;/image/profile-dairy1.jfif&quot;); background-position: center center;">
-                                        </div>
-                                        <!--  -->
-                                        <div class="v-responsive__content" style="width: 2000px;"></div>
-                                    </div>
-                                    <div class="profile-pic"><label for="file" class="-label"><span
-                                                class="glyphicon glyphicon-camera"></span> <span>Change
-                                                Image</span></label> <input id="file" type="file"
-                                            onchange="loadFile(event)"> <img
-                                            src="https://cdn.pixabay.com/photo/2017/08/06/21/01/louvre-2596278_960_720.jpg"
-                                            id="output" width="200"></div>
-                                    <div tabindex="-1" class="profile-text-name ma-4 pt-16 v-list-item theme--light">
-                                        <div class="v-list-item__content">
-                                            <div class="v-list-item__title text-h6">
-                                                Shuvam Kunwer
-                                            </div>
-                                            <div class="v-list-item__subtitle">Computer Engineer</div>
-                                        </div>
-                                        <div class="v-list-item__action"><button type="button"
-                                                class="mx-2 v-btn v-btn--is-elevated v-btn--fab v-btn--has-bg v-btn--round theme--dark v-size--small indigo"><span
-                                                    class="v-btn__content"><i aria-hidden="true"
-                                                        class="v-icon notranslate mdi mdi-plus theme--dark"></i></span></button>
-                                        </div>
-                                    </div>
-                                    <div class="v-card__subtitle"><b class="ml-2">Sobre Mim</b> <button type="button"
-                                            class="v-btn v-btn--icon v-btn--round theme--light v-size--default"><span
-                                                class="v-btn__content">
-                                                <i aria-hidden="true"
-                                                    class="v-icon notranslate mdi mdi-pencil theme--light"
-                                                    style="font-size: 16px;"></i>
-                                            </span>
-                                        </button>
-                                    </div>
-                                    <p class="pl-6 pr-6 pt-0">
-                                        my bio test about myself, what do you know about me?
-                                    </p> <!---->
-                                    <div class="spacer"></div>
-                                    <div
-                                        class="v-input pa-6 v-input--is-label-active v-input--is-dirty v-input--is-disabled theme--light v-text-field v-text-field--is-booted">
-                                        <div class="v-input__prepend-outer">
-                                            <div class="v-input__icon v-input__icon--prepend">
-                                                <i aria-hidden="true"
-                                                    class="v-icon notranslate v-icon--disabled mdi mdi-whatsapp theme--light"></i>
-                                            </div>
-                                        </div>
-                                        <div class="v-input__control">
-                                            <div class="v-input__slot">
-                                                <div class="v-text-field__slot">
-                                                    <label for="input-11"
-                                                        class="v-label v-label--active v-label--is-disabled theme--light"
-                                                        style="left: 0px; right: auto; position: absolute;">Phone</label>
-                                                    <input disabled="disabled" id="input-11" type="text">
-                                                </div>
-                                            </div>
-                                            <div class="v-text-field__details">
-                                                <div class="v-messages theme--light">
-                                                    <div class="v-messages__wrapper"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="spacer"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </main>
                 </div>
-            </div>
+                <div class="card__item__article-shape">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </div>
+            </article>
+            <figure class="card__item-cover">
+                <img src='/image/nature.jpg' alt=''>
+                <figcapture>
+                    Profile
+                </figcapture>
+            </figure>
         </div>
-
-    </body>
-
-
-
+    </div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+<!--TEMPLATE JS-->
 <script src="profile.js"></script>
 
 </html>
