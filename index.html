@@ -15,7 +15,7 @@
 
 <body>
     <div class="container-fluid">
-        <div class="col-lg-12 col-12 row d-flex">
+        <div class=" row ">
             <div class="col-3 col-lg-3" style="border: 2px solid red">
                 DashBoard
             </div>
@@ -35,11 +35,45 @@
                                 </form>
                             </div>
                         </nav>
+                        <div>
+                            <div class="l-ui-container">
+                                <div id="note-app">
+                                  <div class="note-canvas">
+                                    <ol class="note-item-list">
+                                      <note-item
+                                        v-for="(item, index) in noteList"
+                                        v-bind:note="item"
+                                        v-bind:index="index">
+                                      </note-item>
+                                    </ol>
+                                    <form action="#" class="new-note">
+                                      <input type="text" placeholder="Write a new note here..." class="note-input" id="note" v-model="newNote">
+                                      <button class="new-note__submit icon-button" id="add" v-on:click="addNote"><svg class="icon-button__icon" role="presentation"><use xlink:href="#icon-plus"></use></svg></button>
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              
+                              <script type="text/x-template" id="note-template">
+                                  <li class="note-item-list__item">
+                                  <div class="note-item">
+                                    {{ note.text }}
+                                    <span class="note-item__date">{{ note.date | formatDate('DD/MM/YYYY @ h:mm:ss') }}</span>
+                                    <button class="note-item__delete" title="Delete Note?" v-on:click="noteApp.removeItem(index)"><svg class="note-item__delete-icon" role="presentation"><use xlink:href="#icon-delete"></use></svg></button></div>
+                                </li>
+                              </script>
+                              
+                              
+                              <svg style="display: none;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                              <symbol id="icon-plus" width="24" height="24" viewBox="0 0 24 24"><path d="M24 9h-9v-9h-6v9h-9v6h9v9h6v-9h9z"/></symobl>
+                                </symbol><symbol id="icon-delete" width="24" height="24" viewBox="0 0 24 24"><path d="M9 19c0 .552-.448 1-1 1s-1-.448-1-1v-10c0-.552.448-1 1-1s1 .448 1 1v10zm4 0c0 .552-.448 1-1 1s-1-.448-1-1v-10c0-.552.448-1 1-1s1 .448 1 1v10zm4 0c0 .552-.448 1-1 1s-1-.448-1-1v-10c0-.552.448-1 1-1s1 .448 1 1v10zm5-17v2h-20v-2h5.711c.9 0 1.631-1.099 1.631-2h5.315c0 .901.73 2 1.631 2h5.712zm-3 4v16h-14v-16h-2v18h18v-18h-2z"/></symbol></svg>
+                        </div>
                     </div>
                     <div class="col-3" style="border: 2px solid purple">
-                        <div class="">
+                        <div class="row">
                             <!-- <h1>Profil Image Upload 
-                        </h1> -->
+                            </h1> -->
                             <div class="avatar-upload">
                                 <!-- <div class="avatar-edit">
                                 <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
@@ -57,8 +91,8 @@
                                     </button>
                                     <div class="dropdown-menu col-lg-2 col-xs-12 " style="left:0"
                                         aria-labelledby="dropdownMenu2">
-                                        <a href="./other/profile/profile.html" class="profileAnchor"><button class="dropdown-item"
-                                                type="button"><i class="fa-regular fa-user"></i>
+                                        <a href="./other/profile/profile.html" class="profileAnchor"><button
+                                                class="dropdown-item" type="button"><i class="fa-regular fa-user"></i>
                                                 &nbsp;&nbsp;&nbsp;&nbsp;Profile</button></a>
                                         <button class="dropdown-item" type="button">
                                             <hr>
@@ -70,6 +104,7 @@
                                     </div>
                                 </div>
 
+
                                 <!--DropDown End-->
                                 <!-- <div class="avatar-preview">
                                     <div id="imagePreview" style="background-image: url('./image/nature.jpg ');"></div>
@@ -79,15 +114,15 @@
                         </div>
                     </div>
                 </div>
+               
             </div>
         </div>
-
+    </div>
 </body>
 <script src="bootstrap-5.3.0-alpha1/dist/js/bootstrap.js"></script><!--BOOSTRAP JS LINK-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--DropDown JS-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script><!--DropDown JS-->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script><!--DropDown JS-->
 <script src="js/myDiary.js"></script><!--MY JS LINK-->
-
 
 </html>

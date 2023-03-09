@@ -163,8 +163,177 @@ h1 small {
 }
 
 
- 
+ /*NOTE CSS */
 
 
-  
+ /* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Zilla Slab", serif;
+  font-size: 16px;
+  background-color: #22222A;
+} */
+
+.l-ui-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.note-canvas {
+  position: relative;
+  padding: 30px;
+  background: #F5F5F7;
+}
+.note-canvas::after {
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 40px 40px 0;
+  border-color: transparent #22222A transparent transparent;
+}
+.note-canvas::before {
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 40px 0 0 40px;
+  border-color: transparent transparent transparent #d9d9e0;
+}
+
+.note-item {
+  position: relative;
+  padding: 10px 40px 10px 0;
+  font-size: 1.125rem;
+  line-height: 1.45;
+  color: #22222A;
+  border-bottom: 1px dashed #CCCCCC;
+  animation: reveal 0.3s;
+  animation-timing-function: ease-in;
+}
+.note-item__date {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.875rem;
+  font-style: italic;
+  color: #76767E;
+}
+.note-item__delete {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  border: 0;
+  outline: 0;
+  background: none;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: opacity 0.35s ease-in-out;
+}
+.note-item:hover .note-item__delete, .note-item:focus .note-item__delete {
+  opacity: 1;
+}
+.note-item__delete-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  fill: #CCCCCC;
+  transition: fill 0.25s ease-in-out;
+}
+.note-item__delete:hover .note-item__delete-icon, .note-item__delete:focus .note-item__delete-icon {
+  fill: #8f8f8f;
+}
+.note-item:hover .note-item__delete {
+  opacity: 1;
+}
+
+.note-item-list {
+  margin: 0;
+  padding: 0;
+}
+.note-item-list__item {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.new-note {
+  margin-top: 20px;
+  position: relative;
+}
+.new-note__submit {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -12px;
+}
+
+.icon-button {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 0;
+  outline: 0;
+  background: none;
+  cursor: pointer;
+}
+.icon-button__icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  fill: #FF7100;
+  transition: fill 0.25s ease-in-out;
+}
+.icon-button:hover .icon-button__icon, .icon-button:focus .icon-button__icon {
+  fill: #ff8d33;
+}
+
+.note-input {
+  display: block;
+  width: 100%;
+  height: 60px;
+  padding: 10px 40px 10px 0;
+  font-family: "Zilla Slab", serif;
+  font-size: 1.125rem;
+  line-height: 1.45;
+  color: #76767E;
+  resize: vertical;
+  background: none;
+  outline: 0;
+  border: 0;
+  border-bottom: 2px dashed #CCCCCC;
+  transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+}
+.note-input:focus {
+  color: #22222A;
+}
+
+@keyframes reveal {
+  0% {
+    transform: scale(0, 1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
