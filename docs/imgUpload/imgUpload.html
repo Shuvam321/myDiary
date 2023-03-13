@@ -1,56 +1,39 @@
 <html lang="en">
 
-<head>    
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-   <link rel="stylesheet" href="imgUpload.css">
-    <link rel="icon" href="/image/myDiary-logo.jpg"> 
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="imgUpload.css">
+    <link rel="icon" href="/image/myDiary-logo.jpg">
     <title>MyDiary</title>
 </head>
 
 <body>
-    <!-- <div class="panel">
-        <div class="button_outer">
-            <div class="btn_upload">
-                <input type="file" id="upload_file" name="">
-                Upload Image
-            </div>
-            <div class="processing_bar"></div>
-            <div class="success_box"></div>
-        </div>
-    </div>
-  <div style='padding:14px; margin:auto';>
-  <div id="sortableImgThumbnailPreview">
-        
-    </div>
-  </div> -->
 
-<main class="main_full">
-	<div class="container">
-		<div class="panel">
-			<div class="button_outer">
-				<div class="btn_upload">
-					<input type="file" id="upload_file" name="">
-					Upload Image
-				</div>
-				<div class="processing_bar"></div>
-				<div class="success_box"></div>
-			</div>
-		</div>
-		<div class="error_msg"></div>
-		<div class="uploaded_file_view" id="uploaded_view">
-			<span class="file_remove">X</span>
-		</div>
-        <div id="sortableImgThumbnailPreview">
-        
+    <div class="container">
+        <div class="panel">
+            <div style='padding:14px'>
+                <!-- <label for="files">Select multiple files: </label> -->
+                <div class="button_outer">
+                    <div class="btn_upload">
+                        <input id="files" type="file" multiple /> Upload Image
+                    </div>
+                </div>
+            </div>
         </div>
-	</div>
-</main>
-  
+        <div style='padding:14px; margin:auto' ;>
+            <div id="sortableImgThumbnailPreview">
+
+            </div>
+        </div>
+    </div>
+
+
+
 
 </body>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="imgUpload.js"></script>
+
 </html>

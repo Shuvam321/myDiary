@@ -1,86 +1,26 @@
-/* .ui-sortable-placeholder { 
-    border: 1px dashed black!important; 
-    visibility: visible !important;
-    background: #eeeeee78 !important;
-   }
-.ui-sortable-placeholder * { visibility: hidden; }
-    .RearangeBox.dragElemThumbnail{opacity:0.6;}
-    .RearangeBox {
-        width: 180px;
-        height:240px;
-        padding:10px 5px;
-        cursor: all-scroll;
-        float: left; 
-        border: 1px solid #9E9E9E;
-        font-family: sans-serif;
-        display: inline-block;            
-        margin: 5px!important;
-        text-align: center;
-        color: #673ab7;
-        background: #ffc107;
-      /*color: rgb(34, 34, 34);
-        background: #f3f2f1;     
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-
-
-
-body{
-font-family: sans-serif;
-margin: 0px;
+.panel{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.button_outer{
+    background: #83ccd3;
+    border-radius: 30px;
+    text-align: center;
+    height: 50px;
+    width: 200px;
+    display: inline-block;
+    transition: 0.2s;
+    position: relative;
+    overflow: hidden;
 }
 
-.IMGthumbnail{
-width:10px;
-height:220px;
-margin:auto;
-background-color: #ececec;
-padding:2px;
-border:none;
-}
-
-.IMGthumbnail img{
-max-width:100%;
-max-height:100%;
-}
-
-.imgThumbContainer{
-
-margin:4px;
-border: solid;
-display: inline-block;
-justify-content: center;
-position: relative;
-border: 1px solid rgba(0,0,0,0.14);
--webkit-box-shadow: 0 0 4px 0 rgba(0,0,0,0.2);
-box-shadow: 0 0 4px 0 rgba(0,0,0,.2);
-}
-
-
-
-.imgThumbContainer > .imgName{
-text-align:center;
-padding: 2px 6px;
-margin-top:4px;
-font-size:13px;
-height: 15px;
-overflow: hidden;
-}
-
-.imgThumbContainer > .imgRemoveBtn{
-position: absolute;
-color: #e91e63ba;
-right: 2px;
-top: 2px;
-cursor: pointer;
-display: none;
-}
-
-.RearangeBox:hover > .imgRemoveBtn{ 
-display: block;
-}
-
-/*MY CSS
 .btn_upload {
     padding: 17px 30px 12px;
     color: #fff;
@@ -102,168 +42,3 @@ display: block;
     cursor: pointer;
     opacity: 0;
   }
-
-  .panel {
-    margin: 100px auto 40px;
-    max-width: 500px;
-    text-align: center;
-  }
-
-  .button_outer {
-    background: #83ccd3;
-    border-radius: 30px;
-    text-align: center;
-    height: 50px;
-    width: 200px;
-    display: inline-block;
-    transition: 0.2s;
-    position: relative;
-    overflow: hidden;
-  } */
-
-
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    background: #f6f6f6;
-    color: #444;
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
-    line-height: 1;
-  }
-  .container {
-    max-width: 1100px;
-    padding: 0 20px;
-    margin: 0 auto;
-  }
-  .panel {
-    margin: 100px auto 40px;
-    max-width: 500px;
-    text-align: center;
-  }
-  .button_outer {
-    background: #83ccd3;
-    border-radius: 30px;
-    text-align: center;
-    height: 50px;
-    width: 200px;
-    display: inline-block;
-    transition: 0.2s;
-    position: relative;
-    overflow: hidden;
-  }
-  .btn_upload {
-    padding: 17px 30px 12px;
-    color: #fff;
-    text-align: center;
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    z-index: 3;
-    white-space: nowrap;
-  }
-  .btn_upload input {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 105%;
-    cursor: pointer;
-    opacity: 0;
-  }
-  .file_uploading {
-    width: 100%;
-    height: 10px;
-    margin-top: 20px;
-    background: #ccc;
-  }
-  .file_uploading .btn_upload {
-    display: none;
-  }
-  .processing_bar {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0;
-    height: 100%;
-    border-radius: 30px;
-    background: #83ccd3;
-    transition: 3s;
-  }
-  .file_uploading .processing_bar {
-    width: 100%;
-  }
-  .success_box {
-    display: none;
-    width: 50px;
-    height: 50px;
-    position: relative;
-  }
-  .success_box:before {
-    content: "";
-    display: block;
-    width: 9px;
-    height: 18px;
-    border-bottom: 6px solid #fff;
-    border-right: 6px solid #fff;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    position: absolute;
-    left: 17px;
-    top: 10px;
-  }
-  .file_uploaded .success_box {
-    display: inline-block;
-  }
-  .file_uploaded {
-    margin-top: 0;
-    width: 50px;
-    background: #83ccd3;
-    height: 50px;
-  }
-  .uploaded_file_view {
-    max-width: 300px;
-    margin: 40px auto;
-    text-align: center;
-    position: relative;
-    transition: 0.2s;
-    opacity: 0;
-    border: 2px solid #ddd;
-    padding: 15px;
-  }
-  .file_remove {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: block;
-    position: absolute;
-    background: #aaa;
-    line-height: 30px;
-    color: #fff;
-    font-size: 12px;
-    cursor: pointer;
-    right: -15px;
-    top: -15px;
-  }
-  .file_remove:hover {
-    background: #222;
-    transition: 0.2s;
-  }
-  .uploaded_file_view img {
-    max-width: 100%;
-  }
-  .uploaded_file_view.show {
-    opacity: 1;
-  }
-  .error_msg {
-    text-align: center;
-    color: #f00;
-  }
-  
