@@ -9,19 +9,45 @@
 </head>
 
 <body>
-    <div style='padding:14px'>
-        <label for="files">Select multiple files: </label>
-        <input id="files" type="file" multiple/>        
+    <!-- <div class="panel">
+        <div class="button_outer">
+            <div class="btn_upload">
+                <input type="file" id="upload_file" name="">
+                Upload Image
+            </div>
+            <div class="processing_bar"></div>
+            <div class="success_box"></div>
+        </div>
     </div>
   <div style='padding:14px; margin:auto';>
   <div id="sortableImgThumbnailPreview">
         
     </div>
-  </div>
+  </div> -->
+
+<main class="main_full">
+	<div class="container">
+		<div class="panel">
+			<div class="button_outer">
+				<div class="btn_upload">
+					<input type="file" id="upload_file" name="">
+					Upload Image
+				</div>
+				<div class="processing_bar"></div>
+				<div class="success_box"></div>
+			</div>
+		</div>
+		<div class="error_msg"></div>
+		<div class="uploaded_file_view" id="uploaded_view">
+			<span class="file_remove">X</span>
+		</div>
+	</div>
+</main>
   
 
 </body>
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
 <script src="imgUpload.js"></script>
 </html>
